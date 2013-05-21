@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RorBooks</title>
+<link href="/assets/application-371b27b2396b685e0a5cc71ac0e9ad28.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/flexigrid-319a269b516509fcb92ceafce3184de2.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/assets/application-128f0433b5e0f90a520bbdd47ec28193.js" type="text/javascript"></script>
+<script src="/assets/flexigrid-b91780b2742a1affbc767d5f78cf3536.js" type="text/javascript"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="zcBNi67IR9Um2y6H0qnUMyI2cRFyhh18e0gHfHomNMw=" name="csrf-token" />
+</head>
+<body>
+<table id='flex'></table>
+<script>
+  //<![CDATA[
+    $("#flex").flexigrid
+      (
+      {
+      url: "http://0.0.0.0:3000/google_books/grid_data",
+      dataType: 'json',
+      colModel : [
+        {display: 'Thumbnail', name : 'image_url', width : 60, sortable : false, align: 'left'},
+        {display: 'Title', name : 'title', width : 400, sortable : true, align: 'left'},
+        {display: 'Authors', name : 'authors', width : 250, sortable : true, align: 'left'},
+      ],
+      searchitems : [
+        {display: 'Title', name : 'title'},
+        {display: 'Authors', name : 'authors'}
+      ],
+      sortname: "title",
+      sortorder: "desc",
+      usepager: true,
+      title: 'Ruby on Rails books',
+      useRp: true,
+      rp: 10,
+      showTableToggleBtn: true,
+      width: 762,
+      height: 460
+      }
+    );
+  //]]>
+</script>
+
+
+</body>
+</html>

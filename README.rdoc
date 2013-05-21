@@ -1,0 +1,2 @@
+== Simple app for work with Google Books API
+

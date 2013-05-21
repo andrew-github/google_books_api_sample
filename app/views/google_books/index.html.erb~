@@ -1,0 +1,46 @@
+<table border="1">
+  <tr>
+    <th>Thumbnail</th>
+    <th>Title</th>
+    <th>Authors</th>
+  </tr>
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= image_tag book.image_url %></td>
+      <td><%= book.title %></td>
+      <td><%= book.authors %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<h1><strong>Flexigrid</strong> on Rails</h1>
+<table id="flex1"></table>
+<script type="text/javascript">
+  $("#flex1").flexigrid
+    (
+    {
+    url: 'http://localhost:3000/countries/grid_data',
+    dataType: 'json',
+    colModel : [
+      {display: 'Thumbnail', name : 'image_url', width : 40, sortable : true, align: 'left'},
+      {display: 'Title', name : 'title', width : 180, sortable : true, align: 'left'},
+      {display: 'Authors', name : 'authors', width : 120, sortable : true, align: 'left'},
+    ],
+    searchitems : [
+      {display: 'Title', name : 'title'},
+      {display: 'Authors', name : 'authors'}
+    ],
+    sortname: "title",
+    sortorder: "desc",
+    usepager: true,
+    title: 'Ruby on Rails books',
+    useRp: true,
+    rp: 15,
+    showTableToggleBtn: true,
+    width: 700,
+    height: 200
+    }
+  );
+</script>
+

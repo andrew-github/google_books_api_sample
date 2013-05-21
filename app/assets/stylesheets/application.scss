@@ -1,0 +1,15 @@
+/*
+ * Few styles, just for demo
+ */
+ 
+$color: black;
+$weight: normal;
+$f_family: Arial;
+
+#flex td{
+    color: $color;
+    font: {
+      family: $f_family;
+      weight: $weight;
+    }
+}

@@ -1,0 +1,28 @@
+%table{:id => "flex"}
+
+:javascript
+  $("#flex").flexigrid
+    (
+    {
+    url: "#{google_books_grid_data_url}",
+    dataType: 'json',
+    colModel : [
+      {display: 'Thumbnail', name : 'image_url', width : 60, sortable : false, align: 'left'},
+      {display: 'Title', name : 'title', width : 400, sortable : true, align: 'left'},
+      {display: 'Authors', name : 'authors', width : 250, sortable : true, align: 'left'},
+    ],
+    searchitems : [
+      {display: 'Title', name : 'title'},
+      {display: 'Authors', name : 'authors'}
+    ],
+    sortname: "title",
+    sortorder: "desc",
+    usepager: true,
+    title: 'Ruby on Rails books',
+    useRp: true,
+    rp: 10,
+    showTableToggleBtn: true,
+    width: 762,
+    height: 460
+    }
+  );
