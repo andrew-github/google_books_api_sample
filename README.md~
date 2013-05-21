@@ -1,0 +1,6 @@
+== Google Books API Sample: Min functionality
+
+=== This app displays a paginated list of "ruby on rails" books, using the Google Books API.
+=== It has HAML, AJAX, SCSS on board. 
+=== This is a simpliest configuration so it's performance ~5000 requests per minute in production environment on Ubuntu 12.04/Webrick/SQLite/Athlon XP 2500+/4GB RAM. 
+ 
